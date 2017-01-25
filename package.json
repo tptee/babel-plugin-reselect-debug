@@ -23,8 +23,12 @@
     "reselect": "^2.5.4",
     "reselect-change-memoize": "^1.1.0"
   },
+  "peerDependencies": {
+    "reselect": "^2.0.0",
+    "reselect-change-memoize": "^1.0.0"
+  },
   "scripts": {
-    "check": "npm run lint && npm run test",
+    "check": "npm run lint",
     "clean": "rm -rf lib",
     "build": "babel src -d lib",
     "example": "npm run build && babel example/input.js -o example/output.js",
@@ -32,6 +36,6 @@
     "test": "mocha --compilers js:babel-register",
     "test:watch": "npm run test -- --watch",
     "preversion": "npm run check",
-    "version": "npm run clean && npm run build",
+    "version": "npm run clean && npm run build"
   }
 }
